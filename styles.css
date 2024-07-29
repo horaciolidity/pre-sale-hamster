@@ -77,9 +77,10 @@ nav {
     margin-right: 10px;
 }
 
-.swap-icon {
-    text-align: center;
-    margin: 10px 0;
+.swap-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .swap-icon button {
