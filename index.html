@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DApp Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="deBridge">
+        </div>
+        <div class="nav-links">
+            <a href="#">Bridge</a>
+            <a href="#">Developers</a>
+            <a href="#">deExplorer</a>
+            <a href="#">Blog</a>
+            <a href="#">Analytics</a>
+            <a href="#">Refer</a>
+            <a href="#">Points</a>
+            <button id="connect-wallet">Connect wallet</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to our new look!</h1>
+            <p>See everything that's new and read about our mission to build DeFi's internet of liquidity.</p>
+        </div>
+        <div class="exchange-box">
+            <div class="exchange-options">
+                <button>Market</button>
+                <button>Limit</button>
+                <button>P2P</button>
+            </div>
+            <div class="exchange-form">
+                <div class="form-group">
+                    <label for="pay">You pay</label>
+                    <div class="input-group">
+                        <select id="pay">
+                            <option value="ETH">ETH</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <input type="text" id="pay-amount" placeholder="0">
+                    </div>
+                </div>
+                <div class="swap-icon">
+                    <button id="swap">⇅</button>
+                </div>
+                <div class="form-group">
+                    <label for="receive">You receive</label>
+                    <div class="input-group">
+                        <select id="receive">
+                            <option value="ETH">ETH</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <input type="text" id="receive-amount" placeholder="0">
+                    </div>
+                </div>
+                <div class="extra-options">
+                    <p>+ 0 POINTS</p>
+                    <p>ETA: < 2.5 min</p>
+                </div>
+                <div class="trade-options">
+                    <label for="trade-send">Trade and Send to Another Address</label>
+                    <input type="checkbox" id="trade-send">
+                    <div class="routing">
+                        <label for="routing">Routing</label>
+                        <select id="routing">
+                            <!-- Add routing options as needed -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
