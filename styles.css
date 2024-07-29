@@ -7,6 +7,7 @@ body {
     font-family: 'Orbitron', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 nav {
@@ -17,11 +18,6 @@ nav {
     background-color: #1a1a1a;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid #333;
-}
-
-.logo img {
-    height: 40px;
-    filter: drop-shadow(0 0 5px #00ff99);
 }
 
 .nav-links a, #connect-wallet {
@@ -52,8 +48,10 @@ nav {
 
 .container {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de las imágenes de fondo */
 }
 
 .header {
@@ -65,11 +63,44 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
 
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left-side-image, .right-side-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    opacity: 0.2; /* Ajusta la opacidad para que no interfiera con el contenido */
+    z-index: 1;
+}
+
+.left-side-image {
+    left: 0;
+}
+
+.right-side-image {
+    right: 0;
+}
+
+.left-side-image img, .right-side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .exchange-box {
     background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    flex: 2;
+    margin: 0 20px;
+    z-index: 2; /* Asegura que el contenido esté por encima de las imágenes de fondo */
 }
 
 .exchange-options {
