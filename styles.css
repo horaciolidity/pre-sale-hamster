@@ -1,5 +1,5 @@
 body {
-    background-color: #121212;
+    background-color: #0d0d0d;
     color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +11,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #1c1c1c;
+    background-color: #1a1a1a;
 }
 
 .logo img {
@@ -34,27 +34,37 @@ nav {
 
 .container {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .header {
-    background-color: #1c1c1c;
+    background-color: #1a1a1a;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .exchange-box {
-    background-color: #1c1c1c;
+    background-color: #1a1a1a;
     padding: 20px;
     border-radius: 5px;
 }
 
+.exchange-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .exchange-options button {
-    background-color: #1c1c1c;
+    background-color: #333333;
     border: none;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 .exchange-form {
@@ -67,14 +77,16 @@ nav {
 
 .input-group {
     display: flex;
+    align-items: center;
 }
 
 .input-group select, .input-group input {
     padding: 10px;
     border: 1px solid #2c2c2c;
-    background-color: #1c1c1c;
+    background-color: #333333;
     color: #ffffff;
     margin-right: 10px;
+    flex: 1;
 }
 
 .swap-container {
@@ -84,11 +96,12 @@ nav {
 }
 
 .swap-icon button {
-    background-color: #1c1c1c;
+    background-color: #333333;
     border: none;
     color: #ffffff;
     font-size: 20px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .extra-options, .trade-options {
