@@ -55,7 +55,7 @@ nav {
 }
 
 .header {
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.8); /* Fondo oscuro y transparente */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
