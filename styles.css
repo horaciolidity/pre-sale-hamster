@@ -7,7 +7,7 @@ body {
     font-family: 'Orbitron', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    overflow-x: hidden;
 }
 
 nav {
@@ -51,7 +51,7 @@ nav {
     max-width: 1200px;
     margin: 20px auto;
     position: relative;
-    z-index: 2; /* Asegura que el contenido esté por encima de las imágenes de fondo */
+    z-index: 2;
 }
 
 .header {
@@ -75,7 +75,7 @@ nav {
     top: 0;
     bottom: 0;
     width: 50%;
-    opacity: 0.2; /* Ajusta la opacidad para que no interfiera con el contenido */
+    opacity: 0.2;
     z-index: 1;
 }
 
@@ -94,13 +94,15 @@ nav {
 }
 
 .exchange-box {
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.8); /* Fondo oscuro y transparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
     flex: 2;
     margin: 0 20px;
-    z-index: 2; /* Asegura que el contenido esté por encima de las imágenes de fondo */
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
 }
 
 .exchange-options {
@@ -110,7 +112,7 @@ nav {
 }
 
 .exchange-options button {
-    background-color: #333333;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro y transparente */
     border: none;
     color: #00ff99;
     padding: 10px 20px;
@@ -141,7 +143,7 @@ nav {
 .input-group select, .input-group input {
     padding: 10px;
     border: 1px solid #2c2c2c;
-    background-color: #333333;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro y transparente */
     color: #ffffff;
     margin-right: 10px;
     flex: 1;
@@ -161,7 +163,7 @@ nav {
 }
 
 .swap-icon button {
-    background-color: #333333;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro y transparente */
     border: none;
     color: #00ff99;
     font-size: 20px;
