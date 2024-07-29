@@ -1,19 +1,22 @@
-document.getElementById('connect-wallet').addEventListener('click', () => {
-    // Connect wallet functionality
-    alert('Connecting wallet...');
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const grandMasterButton = document.getElementById('grand-master');
+    const lordButton = document.getElementById('lord');
+    const creatorButton = document.getElementById('creator');
+    const payAmountInput = document.getElementById('pay-amount');
+    const receiveAmountInput = document.getElementById('receive-amount');
 
-document.getElementById('swap').addEventListener('click', () => {
-    // Swap functionality
-    let payValue = document.getElementById('pay').value;
-    let receiveValue = document.getElementById('receive').value;
+    grandMasterButton.addEventListener('click', () => {
+        payAmountInput.value = '0.1';
+        receiveAmountInput.value = '2400';
+    });
 
-    document.getElementById('pay').value = receiveValue;
-    document.getElementById('receive').value = payValue;
+    lordButton.addEventListener('click', () => {
+        payAmountInput.value = '0.5';
+        receiveAmountInput.value = '13100';
+    });
 
-    let payAmount = document.getElementById('pay-amount').value;
-    let receiveAmount = document.getElementById('receive-amount').value;
-
-    document.getElementById('pay-amount').value = receiveAmount;
-    document.getElementById('receive-amount').value = payAmount;
+    creatorButton.addEventListener('click', () => {
+        payAmountInput.value = '1';
+        receiveAmountInput.value = '24000';
+    });
 });
