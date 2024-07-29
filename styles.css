@@ -199,3 +199,19 @@ p {
     margin: 0;
     padding: 0;
 }
+.countdown-container {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.countdown {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
