@@ -220,3 +220,20 @@ p {
     display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
+#buy-button {
+  display: block;
+  margin: 0 auto; /* Centrará el botón horizontalmente */
+  padding: 10px 20px;
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#buy-button:active {
+  transform: scale(0.95); /* Reduce ligeramente el tamaño del botón */
+  background-color: gold; /* Cambia el color de fondo al hacer clic */
+}
