@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const payAmountInput = document.getElementById('pay-amount');
     const receiveAmountInput = document.getElementById('receive-amount');
     const buyButton = document.getElementById('buy-button');
+    const connectWalletButton = document.getElementById('connect-wallet');
+
+    // Función para actualizar el valor de receiveAmountInput basado en payAmountInput
+    function updateReceiveAmount() {
+        const payAmount = parseFloat(payAmountInput.value);
+        const tokensPerEth = 28000;
+        const tokens = payAmount * tokensPerEth;
+        receiveAmountInput.value = tokens.toFixed(0);
+    }
 
     grandMasterButton.addEventListener('click', () => {
         payAmountInput.value = '0.1';
@@ -13,13 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lordButton.addEventListener('click', () => {
         payAmountInput.value = '0.5';
-        receiveAmountInput.value = '13100';
+        receiveAmountInput.value = '14000'; // 0.5 * 28000
     });
 
     creatorButton.addEventListener('click', () => {
         payAmountInput.value = '1';
-        receiveAmountInput.value = '24000';
+        receiveAmountInput.value = '28000';
     });
+
+    payAmountInput.addEventListener('input', updateReceiveAmount);
 
     var endDate = new Date();
     endDate.setDate(endDate.getDate() + 15);
@@ -48,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let web3;
     let account;
 
-    const connectWalletButton = document.getElementById('connect-wallet');
     connectWalletButton.addEventListener('click', async () => {
         if (window.ethereum) {
             try {
@@ -94,4 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Conecta tu billetera primero.');
         }
     });
+
+    // Inicializar el valor de receiveAmountInput basado en payAmountInput
+    updateReceiveAmount();
 });
