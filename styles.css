@@ -237,17 +237,30 @@ p {
   transform: scale(0.95); /* Reduce ligeramente el tamaño del botón */
   background-color: gold; /* Cambia el color de fondo al hacer clic */
 }
-@keyframes sword-glow {
+ @keyframes sword-glow {
         0% {
-            text-shadow: none;
-        }
-        50% {
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
-                         0 0 12px rgba(255, 255, 255, 0.6),
-                         0 0 16px rgba(255, 255, 255, 0.4),
-                         0 0 20px rgba(255, 255, 255, 0.2);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                         0 0 20px rgba(255, 255, 255, 0.6),
+                         0 0 30px rgba(255, 255, 255, 0.4),
+                         0 0 40px rgba(255, 255, 255, 0.2);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         100% {
-            text-shadow: none;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                         0 0 20px rgba(255, 255, 255, 0.6),
+                         0 0 30px rgba(255, 255, 255, 0.4),
+                         0 0 40px rgba(255, 255, 255, 0.2);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-position: 100%;
         }
+    }
+
+    .sword-glow span {
+        display: inline-block;
+        position: relative;
+        animation: sword-glow 2s infinite;
     }
