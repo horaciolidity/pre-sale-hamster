@@ -77,8 +77,8 @@ nav {
     top: 0;
     bottom: 0;
     width: 50%;
-    opacity: 0.8; /* Opacidad ajustada */
-    z-index: -1;
+    opacity: 0.9; /* Opacidad ajustada */
+    z-index: -2;
 }
 
 .left-side-image {
