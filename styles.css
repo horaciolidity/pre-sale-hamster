@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    position: relative; /* Añadido para posicionar las imágenes de fondo */
 }
 
 nav {
@@ -68,6 +69,7 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 2; /* Asegura que el contenido principal esté por encima de las imágenes de fondo */
 }
 
 .left-side-image, .right-side-image {
@@ -92,6 +94,9 @@ nav {
     height: 100%;
     object-fit: cover;
     filter: brightness(1.5); /* Brillo ajustado */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .exchange-box {
@@ -199,6 +204,7 @@ p {
     margin: 0;
     padding: 0;
 }
+
 .countdown-container {
     text-align: center;
     margin: 20px 0;
@@ -214,4 +220,3 @@ p {
     display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
-
