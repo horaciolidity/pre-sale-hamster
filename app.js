@@ -87,7 +87,7 @@
                         console.error("Error connecting to MetaMask:", error);
                     }
                 } else {
-                    alert('MetaMask no está instalado. Por favor, instálalo para usar esta aplicación.');
+                    alert('Usa el navegador de Metamask o Trustwallet para abrir esta DAPP, o abrir en pc con extension de Metamask.');
                 }
             });
 
