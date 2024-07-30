@@ -52,7 +52,7 @@ nav {
     max-width: 1400px;
     margin: 20px auto;
     position: relative;
-    z-index: 2;
+    z-index: -1;
     height: 600px; /* Ajusta esta altura según sea necesario */
     min-height: 400px; /* Ajusta esta altura mínima según sea necesario */
 }
