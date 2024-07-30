@@ -237,3 +237,27 @@ p {
   transform: scale(0.95); /* Reduce ligeramente el tamaño del botón */
   background-color: gold; /* Cambia el color de fondo al hacer clic */
 }
+ @keyframes glow-orange {
+        0% { text-shadow: 0 0 5px #FFA500, 0 0 10px #FFA500, 0 0 20px #FFA500, 0 0 40px #FF8C00, 0 0 60px #FF8C00, 0 0 80px #FF8C00, 0 0 100px #FF8C00; }
+        100% { text-shadow: 0 0 5px #FF8C00, 0 0 10px #FF8C00, 0 0 20px #FF8C00, 0 0 40px #FFA500, 0 0 60px #FFA500, 0 0 80px #FFA500, 0 0 100px #FFA500; }
+    }
+
+    @keyframes glow-yellow {
+        0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFFF00, 0 0 60px #FFFF00, 0 0 80px #FFFF00, 0 0 100px #FFFF00; }
+        100% { text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #FFFF00, 0 0 40px #FFD700, 0 0 60px #FFD700, 0 0 80px #FFD700, 0 0 100px #FFD700; }
+    }
+
+    @keyframes glow-red {
+        0% { text-shadow: 0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 40px #FF0000, 0 0 60px #FF0000, 0 0 80px #FF0000, 0 0 100px #FF0000; }
+        100% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 40px #FF4500, 0 0 60px #FF4500, 0 0 80px #FF4500, 0 0 100px #FF4500; }
+    }
+
+    @keyframes glow-green {
+        0% { text-shadow: 0 0 5px #32CD32, 0 0 10px #32CD32, 0 0 20px #32CD32, 0 0 40px #00FF00, 0 0 60px #00FF00, 0 0 80px #00FF00, 0 0 100px #00FF00; }
+        100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 40px #32CD32, 0 0 60px #32CD32, 0 0 80px #32CD32, 0 0 100px #32CD32; }
+    }
+
+    @keyframes glow-cyan {
+        0% { text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF; }
+        100% { text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF; }
+    }
