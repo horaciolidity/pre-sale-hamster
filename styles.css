@@ -52,7 +52,7 @@ nav {
     max-width: 1400px;
     margin: 20px auto;
     position: relative;
-    z-index: -2;
+    z-index: 2;
    
 }
 
