@@ -53,7 +53,10 @@ nav {
     margin: 20px auto;
     position: relative;
     z-index: 2;
+    height: 600px; /* Ajusta esta altura según sea necesario */
+    min-height: 400px; /* Ajusta esta altura mínima según sea necesario */
 }
+
 
 .header {
     background-color: rgba(26, 26, 26, 0.6); /* Fondo oscuro y más claro */
