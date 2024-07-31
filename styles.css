@@ -313,54 +313,75 @@ p {
             transform: scale(1.05);
         }
 
-        .transaction-container {
-        width: 100%;
-        height: 200px; /* Altura fija */
-        overflow: hidden; /* Esconder las transacciones que se desplazan fuera del contenedor */
+      .transaction-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background-color: #1a1a2e;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         position: relative;
+        overflow: hidden;
+        height: 200px; /* Altura fija */
     }
 
     .transaction-list {
         position: absolute;
         width: 100%;
-        animation: scrollUp 10s linear infinite; /* Desplazamiento continuo */
         list-style: none;
         padding: 0;
         margin: 0;
+        animation: scrollUp 15s linear infinite; /* Ajustar duración según sea necesario */
     }
 
-    .transaction-list li {
+    .transaction {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding: 10px 0;
         margin-bottom: 5px;
-        background-color: #1a1a1a;
-        border-radius: 4px;
-        color: #00ff99;
-        font-family: 'Courier New', Courier, monospace;
     }
 
-    .transaction-list li .hash {
+    .transaction:nth-child(odd) {
+        background-color: rgba(51, 51, 51, 0.6);
+    }
+
+    .transaction:nth-child(even) {
+        background-color: rgba(77, 77, 77, 0.6);
+    }
+
+    .transaction span {
+        flex: 1;
+        text-align: center;
+    }
+
+    .address {
+        color: #00ff99;
+    }
+
+    .eth {
         color: #ff00ff;
     }
 
-    .transaction-list li .amount {
+    .hmstr {
+        color: #e3b341;
+    }
+
+    .time {
         color: #00d4ff;
     }
 
-    .transaction-list li .time {
-        color: #e3b341;
+    .hash {
+        color: #ff5733;
     }
 
     @keyframes scrollUp {
         0% {
             transform: translateY(100%);
         }
-        10% {
+        20%,
+        25% {
             transform: translateY(0);
-        }
-        90% {
-            transform: translateY(-100%);
         }
         100% {
             transform: translateY(-100%);
