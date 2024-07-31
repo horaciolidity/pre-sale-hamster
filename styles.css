@@ -312,3 +312,42 @@ p {
             background-color: #0095b6;
             transform: scale(1.05);
         }
+
+        .transaction-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #1a1a2e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transaction {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            animation: fadeUp 10s linear infinite;
+        }
+
+        .transaction:nth-child(odd) {
+            background-color: rgba(51, 51, 51, 0.6);
+        }
+
+        .transaction:nth-child(even) {
+            background-color: rgba(77, 77, 77, 0.6);
+        }
+
+        .transaction span {
+            flex: 1;
+            text-align: center;
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(100%); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(-100%); }
+            100% { opacity: 0; transform: translateY(-200%); }
+        }
