@@ -313,7 +313,7 @@ p {
             transform: scale(1.05);
         }
 
-        .transaction-container {
+       .transaction-container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
@@ -323,13 +323,14 @@ p {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
+            height: 200px; /* Altura fija para la animación */
         }
 
         .transaction {
             display: flex;
             justify-content: space-between;
             padding: 10px 0;
-            animation: fadeUp 10s linear infinite;
+            animation: fadeUp 4s linear infinite;
         }
 
         .transaction:nth-child(odd) {
@@ -345,9 +346,29 @@ p {
             text-align: center;
         }
 
+        .address {
+            color: #00ff99;
+        }
+
+        .eth {
+            color: #ff00ff;
+        }
+
+        .hmstr {
+            color: #e3b341;
+        }
+
+        .time {
+            color: #00d4ff;
+        }
+
+        .hash {
+            color: #ff5733;
+        }
+
         @keyframes fadeUp {
             0% { opacity: 0; transform: translateY(100%); }
-            10% { opacity: 1; transform: translateY(0); }
-            90% { opacity: 1; transform: translateY(-100%); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(-100%); }
             100% { opacity: 0; transform: translateY(-200%); }
         }
