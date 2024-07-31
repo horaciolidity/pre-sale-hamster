@@ -165,11 +165,11 @@
             transaction.classList.add('transaction');
 
             transaction.innerHTML = `
-                <span>${getRandomAddress().substring(0, 6)}...${getRandomAddress().substring(38)}</span>
-                <span>${ethAmount} ETH</span>
-                <span>${getRandomHMSTR(ethAmount)} HMSTR</span>
-                <span>${getRandomTime()}</span>
-                <span>${getRandomHash().substring(0, 10)}...</span>
+                <span class="address">${getRandomAddress().substring(0, 6)}...${getRandomAddress().substring(38)}</span>
+                <span class="eth">${ethAmount} ETH</span>
+                <span class="hmstr">${getRandomHMSTR(ethAmount)} HMSTR</span>
+                <span class="time">${getRandomTime()}</span>
+                <span class="hash">${getRandomHash().substring(0, 10)}...</span>
             `;
 
             return transaction;
@@ -187,5 +187,4 @@
 
         // Start the transaction updates
         updateTransactions();
-  
         });
