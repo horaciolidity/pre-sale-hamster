@@ -35,28 +35,29 @@
             payAmountInput.addEventListener('input', updateReceiveAmount);
 
             var endDate = new Date();
-            endDate.setDate(endDate.getDate() + 15);
+    endDate.setDate(endDate.getDate() + 5); // 5 días restando
 
-            function updateCountdown() {
-                var now = new Date();
-                var timeRemaining = endDate - now;
+    function updateCountdown() {
+        var now = new Date();
+        var timeRemaining = endDate - now;
 
-                if (timeRemaining <= 0) {
-                    document.getElementById('countdown').innerHTML = "Presale has ended!";
-                    return;
-                }
+        if (timeRemaining <= 0) {
+            document.getElementById('countdown').innerHTML = "Presale has ended!";
+            return;
+        }
 
-                var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-                document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m";
-            }
+        document.getElementById('countdown').innerHTML = 
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    }
 
-            // Actualiza el contador cada minuto
-            updateCountdown();
-            setInterval(updateCountdown, 60000);
-
+    // Actualiza el contador cada segundo
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
             // Integrar el script para conectar la billetera
             let web3;
             let account;
