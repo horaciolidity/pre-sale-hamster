@@ -210,21 +210,33 @@ p {
     padding: 0;
 }
 
-.countdown-container {
-    text-align: center;
-    margin: 20px 0;
-    color: #ffffff;
-}
+ .countdown-container {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffffff;
+        }
 
-.countdown {
-    font-size: 24px;
-    font-weight: bold;
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-}
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .countdown span {
+            display: inline-block;
+            min-width: 40px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .countdown .updating {
+            color: #ff0000;
+        }
 #buy-button {
   display: block;
   margin: 0 auto; /* Centrará el botón horizontalmente */
