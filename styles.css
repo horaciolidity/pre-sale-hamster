@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-body {
-    background-color: #0d0d0d;
-    background-image: linear-gradient(45deg, #0f0f0f, #333333); /* Gradiente ajustado a colores más claros */
-    color: #ffffff;
-    font-family: 'Orbitron', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    position: relative; /* Añadido para posicionar las imágenes de fondo */
-}
+   body {
+            background-color: #0d0d0d;
+            background-image: url('https://www.transparenttextures.com/patterns/wave-cut.png'); /* Añadir la imagen wave */
+            background-size: cover; /* Ajustar el tamaño de la imagen de fondo */
+            background-position: center; /* Centrar la imagen de fondo */
+            color: #ffffff;
+            font-family: 'Orbitron', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative; /* Posicionamiento para las imágenes de fondo */
+        }
 
 nav {
     display: flex;
