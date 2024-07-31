@@ -123,4 +123,69 @@
 
             // Inicializar el valor de receiveAmountInput basado en payAmountInput
             updateReceiveAmount();
+
+
+ const transactionContainer = document.getElementById('transaction-container');
+        const addresses = [
+            '0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s',
+            '0x2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9sa1',
+            '0x3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9sa2b3',
+            '0x4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9sa3b4c',
+            '0x5e6f7g8h9i0j1k2l3m4n5o6p7q8r9sa4b5c6d',
+            '0x6f7g8h9i0j1k2l3m4n5o6p7q8r9sa5b6c7d8e',
+            '0x7g8h9i0j1k2l3m4n5o6p7q8r9sa6b7c8d9e0f',
+            '0x8h9i0j1k2l3m4n5o6p7q8r9sa7b8c9d0e1f2g',
+            '0x9i0j1k2l3m4n5o6p7q8r9sa8b9c0d1e2f3g4h',
+            '0x0j1k2l3m4n5o6p7q8r9sa9b0c1d2e3f4g5h6i'
+        ];
+
+        function getRandomAddress() {
+            return addresses[Math.floor(Math.random() * addresses.length)];
+        }
+
+        function getRandomEth() {
+            return (Math.random() * (10 - 0.1) + 0.1).toFixed(2);
+        }
+
+        function getRandomHMSTR(ethAmount) {
+            return (ethAmount * 28000).toFixed(0);
+        }
+
+        function getRandomHash() {
+            return '0x' + Math.random().toString(36).substring(2, 15);
+        }
+
+        function getRandomTime() {
+            return new Date().toLocaleTimeString();
+        }
+
+        function createTransaction() {
+            const ethAmount = getRandomEth();
+            const transaction = document.createElement('div');
+            transaction.classList.add('transaction');
+
+            transaction.innerHTML = `
+                <span>${getRandomAddress().substring(0, 6)}...${getRandomAddress().substring(38)}</span>
+                <span>${ethAmount} ETH</span>
+                <span>${getRandomHMSTR(ethAmount)} HMSTR</span>
+                <span>${getRandomTime()}</span>
+                <span>${getRandomHash().substring(0, 10)}...</span>
+            `;
+
+            return transaction;
+        }
+
+        function updateTransactions() {
+            if (transactionContainer.childElementCount >= 5) {
+                transactionContainer.removeChild(transactionContainer.firstChild);
+            }
+
+            transactionContainer.appendChild(createTransaction());
+
+            setTimeout(updateTransactions, 2000);
+        }
+
+        // Start the transaction updates
+        updateTransactions();
+  
         });
