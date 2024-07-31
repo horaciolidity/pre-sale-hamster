@@ -34,8 +34,9 @@
 
             payAmountInput.addEventListener('input', updateReceiveAmount);
 
-            var endDate = new Date();
-    endDate.setDate(endDate.getDate() + 5); // 5 días restando
+        var endDate = new Date();
+    endDate.setDate(endDate.getDate() + 5); // Sumar 5 días
+    endDate.setHours(endDate.getHours() + 14); // Sumar 14 horas
 
     function updateCountdown() {
         var now = new Date();
