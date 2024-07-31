@@ -255,42 +255,55 @@ p {
         }
     }
 
- .referral-container {
+.container {
+            padding: 20px;
+            max-width: 1400px;
+            margin: 20px auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .referral-container {
             text-align: center;
             margin: 20px;
             padding: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid #333;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: #1a1a2e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .referral-container h2 {
             margin-bottom: 10px;
-            color: #333;
+            color: #00d4ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .referral-link {
             display: block;
             margin: 10px 0;
             padding: 10px;
-            background-color: #e0e0e0;
-            border: 1px solid #ccc;
+            background-color: #2e2e5d;
+            border: 1px solid #00d4ff;
             border-radius: 4px;
             text-decoration: none;
-            color: #333;
-            word-wrap: break-word; /* For handling long URLs */
+            color: #00d4ff;
+            word-wrap: break-word;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         .referral-container button {
             padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+            background-color: #00d4ff;
+            color: #1a1a2e;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .referral-container button:hover {
-            background-color: #0056b3;
+            background-color: #0095b6;
+            transform: scale(1.05);
         }
