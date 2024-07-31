@@ -81,7 +81,7 @@ nav {
     top: 0;
     bottom: 0;
     width: 50%;
-    opacity: 0.9; /* Opacidad ajustada */
+    opacity: 1; /* Opacidad ajustada */
     z-index: -2;
 }
 
